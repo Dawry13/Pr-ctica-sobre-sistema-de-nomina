@@ -1,0 +1,28 @@
+﻿namespace sistema_de_nomina
+{
+    public abstract class Empleado
+    {
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string nss { get; set; }
+
+        public Empleado(
+            string Nombre,
+            string apellido,
+            string nss)
+        {
+            this.Nombre = Nombre;
+            this.Apellido = apellido;
+            this.nss = nss;
+        }
+
+        public abstract decimal CalcularPago();
+
+        public override string ToString()
+        {
+            return $"Nombre: {Nombre}\n" +
+                   $"Apellido: {Apellido}\n" +
+                   $"NSS: {nss}";
+        }
+    }
+}
